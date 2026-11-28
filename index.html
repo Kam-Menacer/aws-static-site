@@ -7,5 +7,11 @@
   <h1>Kam Menacer</h1>
   <p>AWS Certified Cloud Practitioner. Learning cloud, Linux and Terraform.</p>
   <p>This page is hosted on Amazon S3.</p>
+  <p>Visitors: <span id="count">...</span></p>
+  <script>
+    fetch("https://xwneqkpqg6.execute-api.eu-west-2.amazonaws.com/count")
+      .then(r => r.json())
+      .then(d => { document.getElementById("count").textContent = d.visits; });
+  </script>
 </body>
 </html>
